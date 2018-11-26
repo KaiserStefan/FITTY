@@ -61,30 +61,36 @@ export class FittyPage {
           .endStroke();
       }
       drawSchedel(this.schedel, this.colorbrown, 400, 500);
+      /*
+      this.schedel = new createjs.Shape();
+      this.schedel.graphics
+        .moveTo(400,500)
+        .beginFill(this.colorbrown).beginStroke("black")
+        .setStrokeStyle(20)
+        .drawEllipse(0, 0, 1500,1250)
+        .endStroke();
+        */
 
       this.leftear = new createjs.Shape();
+      this.leftear.graphics.beginStroke("black").beginFill("white")
+        .setStrokeStyle(20).moveTo(720,640)
+        .quadraticCurveTo(650,570,650,480)
+        .quadraticCurveTo(650,350,800,410)
+        .quadraticCurveTo(920,470,950,580)
+        //.bezierCurveTo(100,100,200,200,500,500)
+        //.arc(0, 0,70,0, ((Math.PI*2)/360)*170, 1);
+        .endStroke()
+      ;
       this.leftearouter = new createjs.Shape();
-      function drawleftear(leftear, leftouterear, xa, ya,xb,yb, colorbrown) {
-        leftear.graphics.beginStroke("black").beginFill("white")
-          .setStrokeStyle(20).moveTo(xa,ya)/*720,640*/
-          .quadraticCurveTo(xa-70,ya-70,xa-70,ya-180)
-          .quadraticCurveTo(xa-70,ya-290,xa+80,ya-230)
-          .quadraticCurveTo(xa+200,ya-170,xa+230,ya-60)
-          //.bezierCurveTo(100,100,200,200,500,500)
-          //.arc(0, 0,70,0, ((Math.PI*2)/360)*170, 1);
-          .endStroke()
-        ;
-        leftouterear.graphics.beginStroke("black").beginFill(colorbrown)
-          .setStrokeStyle(20).moveTo(xb,yb)/*660,680*/
-          .quadraticCurveTo(xb-120,yb-110,xb-105,yb-245)
-          .quadraticCurveTo(xb-20,yb-480 ,xb+230,yb-330)
-          .quadraticCurveTo(xb+400,yb-210,xb+360,yb-100)
-          //.bezierCurveTo(100,100,200,200,500,500)
-          //.arc(0, 0,70,0, ((Math.PI*2)/360)*170, 1);
-          .endStroke();
-      }
-      drawleftear(this.leftear, this.leftearouter, 720,640,660,680, this.colorbrown);
-
+      this.leftearouter.graphics.beginStroke("black").beginFill(this.colorbrown)
+        .setStrokeStyle(20).moveTo(660,680)
+        .quadraticCurveTo(535,570,555,435)
+        .quadraticCurveTo(640,200 ,890,350)
+        .quadraticCurveTo(1060,470,1020,580)
+        //.bezierCurveTo(100,100,200,200,500,500)
+        //.arc(0, 0,70,0, ((Math.PI*2)/360)*170, 1);
+        .endStroke()
+      ;
       this.rightear = new createjs.Shape();
       this.rightear.graphics.beginStroke("black").beginFill("white")
         .setStrokeStyle(20).moveTo(1520,640)
@@ -95,6 +101,18 @@ export class FittyPage {
         //.arc(0, 0,70,0, ((Math.PI*2)/360)*170, 1);
         .endStroke()
       ;
+      /*
+      this.rightearouter = new createjs.Shape();
+      this.rightearouter.graphics.beginStroke("black").beginFill(this.colorbrown)
+        .setStrokeStyle(20).moveTo(1450,640)
+        .quadraticCurveTo(1300,500,1550,350)
+        .quadraticCurveTo(1750,260,1800,480)
+        .quadraticCurveTo(1840,620,1750,750)
+        //.bezierCurveTo(100,100,200,200,500,500)
+        //.arc(0, 0,70,0, ((Math.PI*2)/360)*170, 1);
+        .endStroke()
+      ;
+      */
 
       this.rightearouter = new createjs.Shape();
       this.rightearouter.graphics.beginStroke("black").beginFill(this.colorbrown)
