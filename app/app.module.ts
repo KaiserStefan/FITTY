@@ -9,13 +9,15 @@ import { FittyPage } from '../pages/fitty/fitty';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import {KraftPage} from "../pages/kraft/kraft";
 
 @NgModule({
   declarations: [
     FittyPage,
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    KraftPage
   ],
   imports: [
     BrowserModule,
@@ -26,7 +28,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     FittyPage,
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    KraftPage
 
   ],
   providers: [
