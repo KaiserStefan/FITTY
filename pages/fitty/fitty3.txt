@@ -1,15 +1,4 @@
-import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
-import * as createjs from "createjs-module";
-
-@Component({
-  selector: 'page-fitty',
-  templateUrl: 'fitty.html'
-})
-export class FittyPage {
-
-
-  private colorbrown = "#936037";
+private colorbrown = "#936037";
 
   private stage;
   private parentcontainer;
@@ -40,11 +29,6 @@ export class FittyPage {
   private test1;
   private test2;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
-    ionViewDidLoad() {
-      console.log('ionViewDidLoad Prototyp1Page');
-    }
 
   drawTamagotchi(uberx, ubery) {
     this.parentcontainer = new createjs.Container();
@@ -146,7 +130,7 @@ export class FittyPage {
       .moveTo(980, 1320)
       .bezierCurveTo(1000, 1390, 1120, 1410, 1150, 1350)
       .bezierCurveTo(1200, 1580, 870, 1560, 980, 1320)
-      .closePath().endFill()
+      .endFill()
       .endStroke()
     ;
     this.lip.graphics.beginStroke("black").beginFill("#DD4368")
@@ -230,20 +214,17 @@ export class FittyPage {
     this.stage.addChild(this.parentcontainer);
   }
 
-    ionViewDidEnter() {
-      this.stage = new createjs.Stage("demoCanvasfitty");
+  this.stage = new createjs.Stage("demoCanvasfitty");
 
-      this.drawTamagotchi(0,0);
-      /*
-      this.test2 = new createjs.Container();
-      this.test1 = new createjs.Shape();
-      this.test1.graphics.moveTo(500,500).setStrokeStyle(20)
-        .beginStroke("black").lineTo(1000,1000).endStroke();
-      this.test2.addChild(this.test1);
-      this.stage.addChild(this.test2);*/
+        this.drawTamagotchi(0,0);
+        /*
+        this.test2 = new createjs.Container();
+        this.test1 = new createjs.Shape();
+        this.test1.graphics.moveTo(500,500).setStrokeStyle(20)
+          .beginStroke("black").lineTo(1000,1000).endStroke();
+        this.test2.addChild(this.test1);
+        this.stage.addChild(this.test2);*/
 
-      console.log("fuck");
-      createjs.Ticker.setFPS(60);
-      createjs.Ticker.addEventListener("tick", this.stage);
-    }
-  }
+        console.log("fuck");
+        createjs.Ticker.setFPS(60);
+        createjs.Ticker.addEventListener("tick", this.stage);

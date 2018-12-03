@@ -6,7 +6,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { FittyPage } from '../pages/fitty/fitty';
-import { KraftPage} from "../pages/kraft/kraft";
+import { KraftPage } from '../pages/kraft/kraft';
 
 @Component({
   templateUrl: 'app.html'
@@ -14,7 +14,7 @@ import { KraftPage} from "../pages/kraft/kraft";
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = KraftPage;
+  rootPage: any = FittyPage;
 
   pages: Array<{title: string, component: any}>;
 
@@ -26,7 +26,7 @@ export class MyApp {
       { title: 'Fitty', component: FittyPage },
       { title: 'Home', component: HomePage },
       { title: 'List', component: ListPage },
-      { title: 'Kraft', component:KraftPage}
+      { title: 'Kraft', component: KraftPage }
     ];
 
   }

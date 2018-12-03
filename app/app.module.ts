@@ -6,15 +6,15 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { FittyPage } from '../pages/fitty/fitty';
+import { KraftPage } from "../pages/kraft/kraft";
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import {KraftPage} from "../pages/kraft/kraft";
 
 @NgModule({
   declarations: [
-    FittyPage,
     MyApp,
+    FittyPage,
     HomePage,
     ListPage,
     KraftPage
@@ -25,8 +25,8 @@ import {KraftPage} from "../pages/kraft/kraft";
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    FittyPage,
     MyApp,
+    FittyPage,
     HomePage,
     ListPage,
     KraftPage

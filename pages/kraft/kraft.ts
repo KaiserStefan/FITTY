@@ -31,10 +31,12 @@ export class KraftPage {
     this.parentcontainer = new createjs.Container();
 
     this.obj1 = new createjs.Shape();
-    this.obj1.graphics.moveTo(10,10)
+    this.obj1.graphics
+      .moveTo(1000,1000)
       .beginStroke("black")
       .setStrokeStyle(15)
-      .lineTo(100,100);
+      .lineTo(1000,2000)
+      .endStroke();
 
 
     this.parentcontainer.addChild(this.obj1);
@@ -44,9 +46,11 @@ export class KraftPage {
   ionViewDidLoad() {
     }
   ionViewDidEnter() {
-    this.stage = new createjs.Stage("demoCanvas");
+    this.stage = new createjs.Stage("demoKraftCanvas");
     this.drawkraftbackground();
-    console.log('ionViewDidLoad KraftPage');
+    console.log('ionViewDidLoad KraftPage', this.stage);
+    createjs.Ticker.setFPS(60);
+    createjs.Ticker.addEventListener("tick", this.stage);
   }
 
 }
